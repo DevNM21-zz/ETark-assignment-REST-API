@@ -1,19 +1,22 @@
 # REST API task for ETark
 Built with express.js, and mongodb
 
+The API is available at: https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com
 # Using the routes with cUrl
+The below commands are using the hosted the API URL, 
+so they can be directly tested by executing them in terminal by copy-pasting.
 ## User Signup
 ### Request
 path: /singup
 #### with JSON
 ```
  curl -H "Content-Type: application/json" \
-   http://localhost:3000/signup \
+   https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/signup \
    --data '{ "email": "you@domain.com", "password": "123456"  }'
 ```
 #### with Form-Data
 ```
-curl http://localhost:3000/signup \
+curl https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/signup \
 -d "email=you@domain.com" -d "password=1234" 
 ```
 Method POST is inferred as we're sending data in the body
@@ -33,12 +36,12 @@ path: /login
 #### with JSON
 ```
  curl -H "Content-Type: application/json" \
-   http://localhost:3000/login \
+   https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/login \
    --data '{ "email": "you@domain.com", "password": "123456"  }'
 ```
 #### with Form-Data
 ```
-curl http://localhost:3000/signup \
+curl https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/signup \
 -d "email=you@domain.com" -d "password=1234" 
 ```
 ### Response
@@ -55,8 +58,8 @@ In the format: "Authorization: Bearer < Token >"*
 ### Request
 ```
 curl -H \
-"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTFhMzBkMjJiNWVhMTRlNmJiMGU4MWYiLCJpYXQiOjE2MjkxMDY0NjUsImV4cCI6MTYyOTE5Mjg2NX0.Mont6uxXuQM06s-1SVvtoyuHgNVlXILVdUxX_vs7DLs" \
-http://localhost:3000/home
+    "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ.eyJzdWIiOiI2MTFhMzBkMjJiNWVhMTRlNmJiMGU4MWYiLCJpYXQiOjE2MjkxMDY0NjUsImV4cCI6MTYyOTE5Mjg2NX0.Mont6uxXuQM06s-1SVvtoyuHgNVlXILVdUxX_vs7DLs" \
+    https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/home
 ```
 ### Response
 ```
