@@ -12,12 +12,12 @@ path: /singup
 ```
  curl -H "Content-Type: application/json" \
    https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/signup \
-   --data '{ "email": "you@domain.com", "password": "123456"  }'
+   --data '{ "name": "user1", "email": "you@domain.com", "password": "123456"  }'
 ```
 #### with Form-Data
 ```
 curl https://3kzh64lpck.execute-api.ap-southeast-1.amazonaws.com/signup \
--d "email=you@domain.com" -d "password=1234" 
+-d "name=user1" -d "email=you@domain.com" -d "password=1234" 
 ```
 Method POST is inferred as we're sending data in the body
 
